@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/eventsListFragment"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Лента"/>
+    <item
+        android:id="@+id/achievementFragment"
+        android:icon="@drawable/medal"
+        android:title="Достижения"/>
+    <item
+        android:id="@+id/shopListFragment"
+        android:icon="@drawable/shop"
+        android:title="Магазин"/>
+    <item
+        android:id="@+id/topUserFragment"
+        android:icon="@drawable/user_top"
+        android:title="Лучшие"/>
+</menu>
