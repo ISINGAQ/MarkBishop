@@ -18,7 +18,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /moab/
-          git pull origin main
+          git pull origin backend
           docker stop moab_project || true
           docker rm moab_project || true
           docker build -t moab_project-main .
