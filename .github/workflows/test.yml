@@ -12,7 +12,7 @@ jobs:
         username: isingaq
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /moab/
+          cd /home/isingaq/moab/
           git pull origin main
           docker stop moab_project || true
           docker rm moab_project || true
