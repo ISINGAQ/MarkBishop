@@ -13,3 +13,7 @@ https://miro.com/app/board/uXjVNkkOW4A=/
 http://158.160.8.34:5000/api/docs#/
 
 776
+
+Аккаунт для теста:
+Логин: isingaq
+пароль: 123qwerty
