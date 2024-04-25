@@ -1,0 +1,28 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ "backend" ]
+  pull_request:
+    branches: [ "backend" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Yandex Cloud
+      uses: appleboy/ssh-action@master
+      with:
+        host: 158.160.8.34
+        username: isingaq
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /moab/
+          git pull origin main
+          docker stop moab_project || true
+          docker rm moab_project || true
+          docker build -t moab_project-main .
+          docker run -d --name moab_project -p 5000:5000 moab_project-main
+          docker stop moab_project || true
+          docker rm moab_project || true
+          docker run -d --name moab_project -p 5000:5000 isingaq/moab_project-main:latest
