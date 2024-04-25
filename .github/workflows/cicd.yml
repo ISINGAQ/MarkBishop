@@ -1,0 +1,23 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ "backend" ]
+  pull_request:
+    branches: [ "backend" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+    - name: Build Docker image
+      run: |
+        docker build -t moab-project .
+    - name: Run tests
+      run: |
+        docker run --rm moab-project npm test
