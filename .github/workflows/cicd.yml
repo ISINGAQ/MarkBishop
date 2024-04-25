@@ -5,11 +5,12 @@ on:
     branches: backend
   pull_request:
     branches: backend
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    
     - name: Deploy to Yandex Cloud
       uses: appleboy/ssh-action@master
       with:
