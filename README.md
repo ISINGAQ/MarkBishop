@@ -16,6 +16,9 @@ https://miro.com/app/board/uXjVNkkOW4A=/
 # Документация
 http://158.160.8.34:5000/api/docs#/
 
+# Asana
+https://app.asana.com/0/1207169705483627/1207169707294884
+
 776
 
 Аккаунт для теста:
